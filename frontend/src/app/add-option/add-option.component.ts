@@ -20,7 +20,7 @@ export class AddOptionComponent {
       return;
     }
 
-    axios.post('http://localhost:3000/poll', { option: this.newOption })
+    axios.post('https://votecounterapp-k57u.onrender.com/poll', { option: this.newOption })
       .then(() => {
         this.message = '✅ Option added successfully!';
         this.newOption = '';

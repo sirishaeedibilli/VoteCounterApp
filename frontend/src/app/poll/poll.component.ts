@@ -53,7 +53,7 @@ export class PollComponent implements OnInit {
   }
 
   loadPolls() {
-    axios.get('http://localhost:3000/poll')
+    axios.get('https://votecounterapp-k57u.onrender.com/poll')
       .then(res => {
         this.options = res.data;
       })
@@ -61,7 +61,7 @@ export class PollComponent implements OnInit {
   }
 
   vote(optionId: string) {
-    axios.put(`http://localhost:3000/poll/${optionId}`)
+    axios.put(`https://votecounterapp-k57u.onrender.com/poll/${optionId}`)
       .then(() => this.loadPolls());
   }
 
@@ -76,7 +76,7 @@ export class PollComponent implements OnInit {
       return;
     }
 
-    axios.post('http://localhost:3000/poll', { option: this.newOption })
+    axios.post('https://votecounterapp-k57u.onrender.com/poll', { option: this.newOption })
       .then(() => {
         this.message = '✅ Option added successfully!';
         this.newOption = '';
