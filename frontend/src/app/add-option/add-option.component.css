@@ -1,0 +1,27 @@
+.add-container {
+  width: 350px;
+  margin: 40px auto;
+  text-align: center;
+}
+input {
+  padding: 8px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1e7e34;
+}
+.msg {
+  margin-top: 10px;
+  font-weight: bold;
+}

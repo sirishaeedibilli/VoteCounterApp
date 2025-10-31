@@ -1,0 +1,68 @@
+🗳️ Project Title: Mini Voting Application (MEAN Stack)
+📘 Description:
+
+The Mini Voting Application is a simple and interactive web app built using the MEAN stack — MongoDB, Express.js, Angular, and Node.js.
+It allows users to cast votes, add new options, and view live vote counts — all in real time.
+The project demonstrates full CRUD operations and seamless data flow between frontend and backend.
+
+⚙️ Technologies Used:
+
+MongoDB → For storing poll options and vote counts
+
+Express.js → Handles API routes and backend logic
+
+Angular → Frontend interface with live data updates
+
+Node.js → Server-side runtime environment
+
+dotenv → To manage environment variables securely
+
+💡 Working:
+
+When the server starts, it automatically seeds default poll options — React, Angular, and Vue — each with 0 votes.
+
+The Angular frontend displays a welcome section showing technologies used (M, E, A, N) in a stylish dropdown.
+
+Below that, the “Cast Your Vote” section appears where users can:
+
+View all current poll options
+
+Click Vote to increase the count for any option
+
+Click ➕ Add New Option to open a form and add a new poll choice
+
+Added options appear instantly on the same page without reload.
+
+Every time you restart the app, all votes are reset to zero, giving a fresh voting session.
+
+The UI is responsive, simple, and modern, with clear separation between the header, poll cards, and form sections.
+
+🧩 Key Features:
+
+Full CRUD functionality (Add, Read, Update)
+
+Real-time vote updates
+
+Auto-reset votes on restart
+
+Responsive and interactive Angular UI
+
+Environment-based MongoDB connection
+
+Clean MEAN architecture without extra services
+
+*********************************************************************************************************
+Execution Process :-
+Make sure you open your Atlas Database first..,
+
+<backend part>
+1. Ctrl + ` (opens terminal)
+2. cd backend
+3. type nodemon server.js (it should start the server and show MongoDB Conncetion is successful)
+
+<frontend part>
+1. Open a new terminal.
+2. cd frontend
+3. type ng serve
+
+Note : Whenever you restart your server or app, it resets the vote value of each option to 0 using the the "updateMany" and "$set"  in MongoDB.

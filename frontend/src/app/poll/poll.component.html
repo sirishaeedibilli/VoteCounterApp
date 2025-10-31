@@ -1,0 +1,40 @@
+<!-- Navbar Section -->
+<div class="navbar">
+  <h1>👋 Welcome to My Mini Voting Application</h1>
+
+  <div class="dropdown">
+    <button class="dropbtn">🛠️ Technologies Used ▾</button>
+    <div class="dropdown-content">
+      <a href="#">M - MongoDB</a>
+      <a href="#">E - Express.js</a>
+      <a href="#">A - Angular</a>
+      <a href="#">N - Node.js</a>
+    </div>
+  </div>
+</div>
+
+<!-- Poll Section -->
+<div class="poll-container">
+  <h2>🗳️ Cast Your Vote</h2>
+
+  <div *ngFor="let o of options" class="poll-card">
+    <span>{{ o.option }}</span>
+    <span>{{ o.votes }} votes</span>
+    <button (click)="vote(o._id)">Vote</button>
+  </div>
+
+  <button class="add-btn" (click)="toggleAddForm()">
+    {{ showAddForm ? 'Cancel' : '➕ Add New Option' }}
+  </button>
+
+  <div *ngIf="showAddForm" class="add-form">
+    <input [(ngModel)]="newOption" placeholder="Enter new option" />
+    <button (click)="addOption()">Save</button>
+  </div>
+
+  <p class="message">{{ message }}</p>
+</div>
+
+<footer class="footer">
+  <p>© 2025 Mini Voting Application | Built with 💻 MEAN Stack</p>
+</footer>
